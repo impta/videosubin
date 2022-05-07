@@ -1,2 +1,62 @@
 [build.docker]
 worker = "Dockerfile"
+
+[env.API_ID]
+description = "api_id part of your Telegram API Key from my.telegram.org/apps"
+required = true
+
+[env.API_HASH]
+description = "api_hash part of your Telegram API Key from my.telegram.org/apps"
+required = true
+
+[env.BOT_TOKEN]
+description = "Bot token of Bot, get from @Botfather"
+required = true
+
+[env.SESSION_STRING]
+description = "Session string, read the README to learn how to export it with Pyrogram"
+required = true
+
+[env.CHAT]
+description = "ID of Channel or Group where the Bot plays Music"
+required = true
+
+[env.LOG_GROUP]
+description = "ID of the group to send playlist If CHAT is a Group, if channel then leave blank"
+required = false
+
+[env.QUALITY]
+description = "Default quality of your video player, Use one of high, medium or low."
+value = "low"
+required = false
+
+[env.DATABASE_URI]
+description = "Mongo DB database URI , get from https://cloud.mongodb.com, even if this is optional, many of functions may not work if this is not set."
+required = false
+
+[env.ADMINS]
+description = "ID of Users who can use Admin commands(for multiple users seperated by space)"
+required = true
+
+[env.ADMIN_ONLY]
+description = "Change it to True if you want to make /play command available for everyone."
+value = "False"
+required = false
+
+[env.HEROKU_API_KEY]
+description = "Your heroku api key, get it from https://dashboard.heroku.com/account/applications/authorizations/new."
+required = false
+
+[env.HEROKU_APP_NAME]
+description = "Heroku App Name."
+required = false
+
+[env.STARTUP_STREAM]
+description = "YouTube live / Direct link to a video / Telegram link to a YouTube playlist.(Read the README for more info.) "
+value = "/"
+required = false
+
+[env.REPLY_MESSAGE]
+description = "A reply message to those who message the USER account in PM. Make it blank if you do not need this feature."
+value = "El-enLiL"
+required = false
