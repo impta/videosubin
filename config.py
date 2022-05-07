@@ -31,24 +31,24 @@ except ModuleNotFoundError:
 class Config:
     #Telegram API Stuffs
     load_dotenv()  # load enviroment variables from .env file
-    ADMIN = os.environ.get("ADMINS", '')
+    ADMIN = os.environ.get("ADMINS", '1203688744')
     SUDO = [int(admin) for admin in (ADMIN).split()] # Exclusive for heroku vars configuration.
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
-    API_ID = int(os.environ.get("API_ID", ''))
-    API_HASH = os.environ.get("API_HASH", "")
+    API_ID = int(os.environ.get("API_ID", '11042778'))
+    API_HASH = os.environ.get("API_HASH", "583227ff3ba18dcd47f89b92fa01e092")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
-    SESSION = os.environ.get("SESSION_STRING", "")
+    SESSION = os.environ.get("SESSION_STRING", "BAAO0dAjZqNnl9xSI-rlvx3fds1tpJBFWngROV67eA44KRC0Xy9SMOq_yhM-4UnPdyHxlx2PvJB5xGN0yNyAVkyy_nHt7svKWPIo76IPC2C6u5jcE0DpNgyU7cua5KUDTyU64HR6byqRLmFuyxMZEJSuiD91aytbRnrWgChrRmtIORmL-OW27B22cJr8JStFCujk01Ga2ouPOP1eBbLAWXU4cxQuAT9Q-98DIETUgEIWwzTHpq0QxGZBrCJOeROdqbYVnodkjuf5u37UX6uabrFTGgcMk0EYK7RbeG_7MM_7Dq0ysm6zaU9F9b3mRU3xuxPZ442hfR_Jx5ZTKi38UV_3AAAAAHiWePgA")
 
     #Stream Chat and Log Group
     CHAT = int(os.environ.get("CHAT", ""))
     LOG_GROUP=os.environ.get("LOG_GROUP", "")
 
     #Stream 
-    STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
+    STREAM_URL=os.environ.get("STARTUP_STREAM", "/")
    
     #Database
-    DATABASE_URI=os.environ.get("DATABASE_URI", None)
-    DATABASE_NAME=os.environ.get("DATABASE_NAME", "VCPlayerBot")
+    DATABASE_URI=os.environ.get("DATABASE_URI", "mongodb+srv://gapemoonub:gapemoonub@cluster0.ss4bq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+    DATABASE_NAME=os.environ.get("DATABASE_NAME", "gapemoonub")
 
 
     #heroku
@@ -58,17 +58,17 @@ class Config:
 
     #Optional Configuration
     SHUFFLE=is_enabled(os.environ.get("SHUFFLE", 'True'))
-    ADMIN_ONLY=is_enabled(os.environ.get("ADMIN_ONLY", "False"))
+    ADMIN_ONLY=is_enabled(os.environ.get("ADMIN_ONLY", "True"))
     REPLY_MESSAGE=os.environ.get("REPLY_MESSAGE", False)
-    EDIT_TITLE = os.environ.get("EDIT_TITLE", True)
+    EDIT_TITLE = os.environ.get("EDIT_TITLE", False)
     #others
     
     RECORDING_DUMP=os.environ.get("RECORDING_DUMP", False)
     RECORDING_TITLE=os.environ.get("RECORDING_TITLE", False)
-    TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Kolkata")    
+    TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Tehran")    
     IS_VIDEO=is_enabled(os.environ.get("IS_VIDEO", 'True'))
     IS_LOOP=is_enabled(os.environ.get("IS_LOOP", 'True'))
-    DELAY=int(os.environ.get("DELAY", '10'))
+    DELAY=int(os.environ.get("DELAY", '5'))
     PORTRAIT=is_enabled(os.environ.get("PORTRAIT", 'False'))
     IS_VIDEO_RECORD=is_enabled(os.environ.get("IS_VIDEO_RECORD", 'True'))
     DEBUG=is_enabled(os.environ.get("DEBUG", 'False'))
@@ -77,7 +77,7 @@ class Config:
     #Quality vars
     E_BITRATE=os.environ.get("BITRATE", False)
     E_FPS=os.environ.get("FPS", False)
-    CUSTOM_QUALITY=os.environ.get("QUALITY", "100")
+    CUSTOM_QUALITY=os.environ.get("QUALITY", "50")
 
     #Search filters for cplay
     FILTERS =  [filter.lower() for filter in (os.environ.get("FILTERS", "video document")).split(" ")]
