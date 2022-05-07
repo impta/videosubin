@@ -22,9 +22,9 @@
   "author": "Ezekiel Ekunola",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Easybuoy/package.json-mastery/issues"
+    "url": "https://github.com/impta/videosubin.git-mastery/issues"
   },
-  "homepage": "https://github.com/Easybuoy/package.json-mastery#readme",
+  "homepage": "https://github.com/impta/videosubin#readme",
   "engines": {
     "Dockerfile",
     "python3": "3.10.4",
